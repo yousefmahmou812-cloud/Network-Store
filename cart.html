@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Network Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div class="nav-brand">🌐 Network Store</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html" class="cart-link active-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+</nav>
+
+<div class="cart-container">
+    <h1>Shopping <span class="gradient-text">Cart</span></h1>
+    <div id="cartItems"></div>
+    <div class="cart-summary glass-card">
+        <h3>Total: $<span id="total">0</span></h3>
+        <div class="cart-actions">
+            <button class="btn btn-primary btn-glow" onclick="checkout()">Checkout →</button>
+            <button class="btn btn-outline" onclick="window.location.href='products.html'">Continue Shopping</button>
+            <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-bottom">
+        <p>&copy; 2026 Network Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

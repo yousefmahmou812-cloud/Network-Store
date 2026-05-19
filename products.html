@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Network Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-brand">🌐 Network Store</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active-link">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <div class="products-page">
+        <h1>Our <span class="gradient-text">Products</span></h1>
+
+        <!-- PRICING TABLE -->
+        <div style="margin-bottom: 40px; overflow-x: auto;">
+            <h2 style="color: #00d4ff; margin-bottom: 15px; text-align: center;">Featured Devices Pricing</h2>
+            <table style="width: 100%; border-collapse: collapse; background: #1a1f2e; color: #fff; border: 1px solid #00d4ff; text-align: left;">
+                <thead>
+                    <tr style="background: #00d4ff; color: #000;">
+                        <th style="padding: 12px; border: 1px solid #00d4ff;">Product Name</th>
+                        <th style="padding: 12px; border: 1px solid #00d4ff;">Base Price</th>
+                        <th style="padding: 12px; border: 1px solid #00d4ff;">Description</th>
+                    </tr>
+                </thead>
+                <tbody id="pricing-table-body">
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #333;">Router - TP-Link Archer A6</td>
+                        <td style="padding: 12px; border: 1px solid #333;">$120</td>
+                        <td style="padding: 12px; border: 1px solid #333;">High-performance wireless router</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- SEARCH BAR -->
+        <div class="search-container">
+            <input type="text" id="search" placeholder="🔍 Search products..." onkeyup="searchProduct()">
+            <button class="btn btn-search" onclick="clearSearch();showAction('Clear Search')">Clear</button>
+        </div>
+
+        <!-- SORT -->
+        <div style="text-align:center; margin-bottom: 20px;">
+            <label style="color:#aaa; margin-right:10px;">Sort by:</label>
+            <select id="sortSelect" onchange="sortProducts()" style="padding:10px 20px; background:#1a1f2e; border:2px solid #00d4ff; color:#fff; border-radius:6px; cursor:pointer;">
+                <option value="default">Default</option>
+                <option value="price-low">Price: Low → High</option>
+                <option value="price-high">Price: High → Low</option>
+                <option value="name-az">Name: A → Z</option>
+            </select>
+        </div>
+
+        <!-- FILTER BUTTONS -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" onclick="filterCategory('all');showAction('All Products')">All Products</button>
+            <button class="filter-btn" onclick="filterCategory('Router');showAction('Routers')">Routers</button>
+            <button class="filter-btn" onclick="filterCategory('Switch');showAction('Switches')">Switches</button>
+            <button class="filter-btn" onclick="filterCategory('Cable');showAction('Cables')">Cables</button>
+            <button class="filter-btn" onclick="filterCategory('Access Point');showAction('Access Points')">Access Points</button>
+            <button class="filter-btn" onclick="filterCategory('Firewall');showAction('Firewalls')">Firewalls</button>
+            <button class="filter-btn" onclick="filterCategory('PoE');showAction('PoE')">PoE</button>
+            <button class="filter-btn" onclick="filterCategory('Rack');showAction('Racks')">Racks</button>
+            <button class="filter-btn" onclick="filterCategory('Patch Panel');showAction('Patch Panels')">Patch Panels</button>
+            <button class="filter-btn" onclick="filterCategory('UPS');showAction('UPS')">UPS</button>
+            <button class="filter-btn" onclick="filterCategory('Extender');showAction('Extenders')">Extenders</button>
+        </div>
+
+        <!-- PRODUCT COUNT -->
+        <p id="productCount" style="text-align:center; color:#aaa; margin-bottom:20px;"></p>
+
+        <!-- PRODUCTS GRID -->
+        <div class="products-grid" id="products" onclick="showAction('Products Grid')"></div>
+    </div>
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div id="detailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="detailsContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+    function showAction(action) {
+        let toast = document.getElementById('action-toast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'action-toast';
+            toast.style.cssText = 'position:fixed;top:30px;left:50%;transform:translateX(-50%) translateY(-100px);background:linear-gradient(135deg,#00d4ff,#0088ff);color:#000;padding:14px 30px;border-radius:10px;font-weight:600;z-index:9999;transition:transform 0.4s;box-shadow:0 8px 30px rgba(0,212,255,0.4);';
+            document.body.appendChild(toast);
+        }
+        toast.textContent = `Action: ${action}`;
+        toast.style.transform = 'translateX(-50%) translateY(0)';
+        setTimeout(() => { toast.style.transform = 'translateX(-50%) translateY(-100px)'; }, 2000);
+    }
+    </script>
+</body>
+</html>

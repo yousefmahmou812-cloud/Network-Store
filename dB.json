@@ -1,0 +1,80 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Router",
+      "price": 500
+    },
+    {
+      "id": "2",
+      "name": "Switch",
+      "price": 800
+    },
+    {
+      "id": "yG3EtepDNms",
+      "name": "New Device 95",
+      "price": 582
+    },
+    {
+      "id": "AVoVLNEeS0w",
+      "name": "New Device 66",
+      "price": 252
+    },
+    {
+      "id": "7tEncWQRgLY",
+      "name": "New Device 99",
+      "price": 595
+    },
+    {
+      "id": "SNoRtHt-gJo",
+      "name": "New Device 62",
+      "price": 286
+    },
+    {
+      "id": "EGbjVfu2JxU",
+      "name": "New Device 54",
+      "price": 289
+    },
+    {
+      "id": "OlUrrvBbNZw",
+      "name": "New Device 98",
+      "price": 397
+    },
+    {
+      "id": "5rABmi8rDFg",
+      "name": "New Device 59",
+      "price": 145
+    },
+    {
+      "id": "3ZYh3208PAQ",
+      "name": "New Device 17",
+      "price": 178
+    },
+    {
+      "id": "VTRwLKTDr8g",
+      "name": "New Device 58",
+      "price": 182
+    },
+    {
+      "id": "1Lvh-nDMTfQ",
+      "name": "New Device 78",
+      "price": 328
+    },
+    {
+      "id": "r8iOsa0Nw5g",
+      "name": "New Device 58",
+      "price": 274
+    }
+  ],
+  "cart": [],
+  "contacts": [
+    {
+      "id": "A6vRZ4w0eUg",
+      "name": "Yousef",
+      "email": "42310045.Yousef@acu.edu.eg",
+      "message": "strong website",
+      "date": "2026-05-19T15:29:52.273Z"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

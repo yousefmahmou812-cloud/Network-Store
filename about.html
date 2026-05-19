@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Network Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div class="nav-brand">🌐 Network Store</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html" class="active-link">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+</nav>
+
+<section class="about-hero" style="position: relative; overflow: hidden;">
+    <canvas id="aboutNetworkCanvas" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; opacity: 0.5;"></canvas>
+    <div class="about-hero-content reveal-on-scroll" style="position: relative; z-index: 2;">
+        <h1>Building the Future of <span class="gradient-text">Connectivity</span></h1>
+        <p>We are a world-class provider of enterprise networking solutions. From robust routers to high-speed switches, we empower businesses to connect with confidence.</p>
+    </div>
+</section>
+
+<div class="about-container">
+    <div class="grid-section">
+        <div class="glass-card premium-glass reveal-on-scroll">
+            <h3><span>🎯</span> Our Mission</h3>
+            <p>To eliminate digital borders by providing uninterrupted, secure, and blazing-fast networking hardware. We believe that every connection matters, whether it's a small home office or a sprawling global enterprise infrastructure.</p>
+        </div>
+        <div class="glass-card premium-glass reveal-on-scroll" style="transition-delay: 150ms;">
+            <h3><span>👁️</span> Our Vision</h3>
+            <p>To be the globally recognized leader in network infrastructure innovation. We are constantly evolving our product lines to integrate next-generation technologies like AI-driven routing and ultra-low latency optical networking.</p>
+        </div>
+    </div>
+
+    <!-- TEAM SECTION -->
+    <h2 class="section-title reveal-on-scroll">Our <span class="gradient-text">Team</span></h2>
+    <div class="team-grid">
+        <div class="team-card premium-glass reveal-on-scroll">
+            <div class="team-avatar avatar-ah">AH</div>
+            <h3>Ahmed Hassan</h3>
+            <p class="team-role">CEO & Founder</p>
+            <p>15+ years in networking industry</p>
+            <button class="btn btn-outline btn-sm" onclick="openConnectModal('Ahmed Hassan', 'CEO & Founder', 'ahmed.hassan@networkstore.com', 'avatar-ah', 'AH')">Connect</button>
+        </div>
+        <div class="team-card premium-glass reveal-on-scroll" style="transition-delay: 150ms;">
+            <div class="team-avatar avatar-sm">SM</div>
+            <h3>Sara Mohamed</h3>
+            <p class="team-role">CTO</p>
+            <p>Expert in cloud & network architecture</p>
+            <button class="btn btn-outline btn-sm" onclick="openConnectModal('Sara Mohamed', 'CTO', 'sara.mohamed@networkstore.com', 'avatar-sm', 'SM')">Connect</button>
+        </div>
+        <div class="team-card premium-glass reveal-on-scroll" style="transition-delay: 300ms;">
+            <div class="team-avatar avatar-oa">OA</div>
+            <h3>Omar Ali</h3>
+            <p class="team-role">Head of Support</p>
+            <p>CCNA/CCNP certified engineer</p>
+            <button class="btn btn-outline btn-sm" onclick="openConnectModal('Omar Ali', 'Head of Support', 'omar.ali@networkstore.com', 'avatar-oa', 'OA')">Connect</button>
+        </div>
+    </div>
+
+    <div class="stats-section premium-glass reveal-on-scroll">
+        <div class="stat-item">
+            <div class="stat-number" data-target="10000">0</div>
+            <div class="stat-label">Global Clients</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="99">0</div>
+            <div class="stat-label">Uptime %</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="24">0</div>
+            <div class="stat-label">Support Hours</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number" data-target="15">0</div>
+            <div class="stat-label">Years Exp.</div>
+        </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <h2 class="section-title reveal-on-scroll" style="margin-top:80px;">Our <span class="gradient-text">Journey</span></h2>
+    <div class="timeline-container">
+        <div class="timeline-track">
+            <div class="timeline-progress" id="timelineProgress"></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item left reveal-on-scroll">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content premium-glass timeline-clickable" onclick="openMilestoneModal('founded')">
+                    <div class="timeline-year">2010</div>
+                    <h3>Founded</h3>
+                    <p>Started as a small networking shop in Cairo, serving local businesses.</p>
+                    <span class="timeline-action-badge">Read Story 📖</span>
+                </div>
+            </div>
+            <div class="timeline-item right reveal-on-scroll">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content premium-glass timeline-clickable" onclick="openMilestoneModal('expansion')">
+                    <div class="timeline-year">2015</div>
+                    <h3>Regional Expansion</h3>
+                    <p>Grew to serve over 5,000+ clients across the Middle East market.</p>
+                    <span class="timeline-action-badge">View Hubs 🗺️</span>
+                </div>
+            </div>
+            <div class="timeline-item left reveal-on-scroll">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content premium-glass timeline-clickable" onclick="routeMilestone('products')">
+                    <div class="timeline-year">2020</div>
+                    <h3>E-Commerce Launch</h3>
+                    <p>Launched our advanced global e-commerce platform for international reach.</p>
+                    <span class="timeline-action-badge">Visit Store 🛒</span>
+                </div>
+            </div>
+            <div class="timeline-item right reveal-on-scroll">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content premium-glass timeline-clickable" onclick="routeMilestone('contact')">
+                    <div class="timeline-year">2026</div>
+                    <h3>Global Leader</h3>
+                    <p>Recognized industry leader with over 10,000+ satisfied corporate clients.</p>
+                    <span class="timeline-action-badge">Partner With Us 🤝</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Team Connect Modal -->
+<div id="connectModal" class="modal">
+    <div class="modal-content" style="max-width: 500px;">
+        <span class="close" onclick="closeConnectModal()">&times;</span>
+        <div class="connect-header" style="text-align: center; margin-bottom: 24px;">
+            <div id="modalAvatar" class="team-avatar" style="margin: 0 auto 16px;">AH</div>
+            <h2 id="modalName" style="color: var(--text-main); margin-bottom: 4px; font-weight: 800;">Ahmed Hassan</h2>
+            <p id="modalRole" style="color: var(--accent-primary); font-weight: 600; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0;">CEO & Founder</p>
+        </div>
+        <div class="connect-info" style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-card); padding: 12px 16px; border-radius: var(--border-radius-sm); border: 1px solid var(--border-color);">
+                <span style="color: var(--text-muted); font-size: 0.9rem;">Email:</span>
+                <span id="modalEmail" style="color: var(--text-main); font-weight: 600; font-size: 0.9rem; word-break: break-all;">ahmed.hassan@networkstore.com</span>
+                <button class="btn btn-outline btn-sm" style="padding: 4px 10px; font-size: 0.8rem; margin-left: 8px;" onclick="copyEmail()">Copy</button>
+            </div>
+        </div>
+        <form id="connectForm" onsubmit="return sendTeamMessage(event)">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="color: var(--text-main); font-weight: 500; font-size: 0.9rem; text-align: left;">Your Email</label>
+                <input type="email" id="senderEmail" required placeholder="name@company.com" style="padding: 12px; background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); color: var(--text-main); border-radius: var(--border-radius-sm);">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 12px;">
+                <label style="color: var(--text-main); font-weight: 500; font-size: 0.9rem; text-align: left;">Message</label>
+                <textarea id="senderMessage" required placeholder="Type your message..." style="padding: 12px; min-height: 100px; background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); color: var(--text-main); border-radius: var(--border-radius-sm); resize: vertical;"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px; padding: 14px;">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<!-- Milestone Detail Modal -->
+<div id="milestoneModal" class="modal">
+    <div class="modal-content" style="max-width: 550px;">
+        <span class="close" onclick="closeMilestoneModal()">&times;</span>
+        <div class="milestone-modal-header" style="text-align: center; margin-bottom: 24px;">
+            <div id="milestoneIcon" style="font-size: 3.5rem; margin-bottom: 12px;">🏆</div>
+            <h2 id="milestoneTitle" style="color: var(--text-main); font-weight: 800; margin-bottom: 4px;">Milestone Title</h2>
+            <p id="milestoneYear" style="color: var(--accent-primary); font-weight: 700; font-size: 1.2rem;">2010</p>
+        </div>
+        <div id="milestoneBody" style="color: var(--text-muted); line-height: 1.8; font-size: 1rem; margin-bottom: 24px; text-align: left;">
+            Milestone details go here.
+        </div>
+        <div id="milestoneActionContainer" style="text-align: center;">
+            <button class="btn btn-primary" id="milestoneActionButton" style="width: 100%; padding: 14px;">Action</button>
+        </div>
+    </div>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-bottom">
+        <p>&copy; 2026 Network Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

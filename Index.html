@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Devices Store - Premium Networking Solutions</title>
+    <meta name="description" content="Shop premium networking equipment: routers, switches, firewalls, access points and more.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+    <div class="nav-brand">🌐 Network Store</div>
+    <ul>
+        <li><a href="index.html" class="active-link">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html" class="cart-link">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+        <span class="hero-badge">🚀 #1 Network Equipment Store</span>
+        <h1>Next-Gen <span class="gradient-text">Networking</span> Solutions</h1>
+        <p>Enterprise-grade routers, switches, firewalls & more — delivered to your door</p>
+        <div class="hero-buttons">
+            <a href="products.html" class="btn btn-primary btn-glow" onclick="showAction('Shop Now')">Shop Now</a>
+            <button class="btn btn-outline" onclick="scrollToFeatures();showAction('Explore Features')">Explore Features ↓</button>
+        </div>
+    </div>
+</section>
+
+<!-- NETWORK SCANNER TOOL -->
+<section class="scanner-section">
+    <div class="scanner-card">
+        <div class="scanner-icon">📡</div>
+        <h2>Network Speed Test</h2>
+        <p>Test your connection speed right here</p>
+        <div class="speed-display" id="speedDisplay">
+            <div class="speed-number" id="speedNumber">0</div>
+            <div class="speed-unit">Mbps</div>
+        </div>
+        <div class="speed-bar-container">
+            <div class="speed-bar" id="speedBar"></div>
+        </div>
+        <button class="btn btn-primary btn-glow" id="scanBtn" onclick="runSpeedTest();showAction('Speed Test')">Run Speed Test</button>
+        <p class="scanner-note" id="scanResult"></p>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+    <h2 class="section-title">Why Choose <span class="gradient-text">Network Store</span></h2>
+    <div class="features">
+        <div class="feature glass-card" onclick="showAction('Lightning Delivery')" style="cursor:pointer;">
+            <div class="feature-icon">⚡</div>
+            <h3>Lightning Delivery</h3>
+            <p>Free express shipping on all orders over $100</p>
+        </div>
+        <div class="feature glass-card" onclick="showAction('Best Prices')" style="cursor:pointer;">
+            <div class="feature-icon">💰</div>
+            <h3>Best Prices</h3>
+            <p>Price match guarantee on all products</p>
+        </div>
+        <div class="feature glass-card" onclick="showAction('Top Brands')" style="cursor:pointer;">
+            <div class="feature-icon">⭐</div>
+            <h3>Top Brands</h3>
+            <p>Cisco, TP-Link, Fortinet & more</p>
+        </div>
+        <div class="feature glass-card" onclick="showAction('2-Year Warranty')" style="cursor:pointer;">
+            <div class="feature-icon">🛡️</div>
+            <h3>2-Year Warranty</h3>
+            <p>Full coverage on every device</p>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED PRODUCTS -->
+<section class="featured-section">
+    <h2 class="section-title">Featured <span class="gradient-text">Products</span></h2>
+    <div class="featured-products" id="featured" onclick="showAction('Featured Products')"></div>
+    <div style="text-align:center; margin-top:30px;">
+        <a href="products.html" class="btn btn-primary">View All Products →</a>
+    </div>
+</section>
+
+<!-- OFFER BANNER -->
+<section class="offer-banner">
+    <div class="offer-content">
+        <h2>🔥 Flash Sale — Up to 50% OFF</h2>
+        <p>Limited time deals on enterprise routers and firewalls</p>
+        <button class="btn btn-danger btn-glow" onclick="changeText(this);showAction('Reveal Offer')">Reveal Offer</button>
+    </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands-section">
+    <h2 class="section-title">Trusted <span class="gradient-text">Brands</span></h2>
+    <div class="brands-track" onclick="showAction('Brands')">
+        <div class="brand-item">Cisco</div>
+        <div class="brand-item">TP-Link</div>
+        <div class="brand-item">Fortinet</div>
+        <div class="brand-item">Palo Alto</div>
+        <div class="brand-item">Netgear</div>
+        <div class="brand-item">APC</div>
+        <div class="brand-item">Eaton</div>
+    </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+    <div class="newsletter-card glass-card">
+        <h2>📬 Stay Updated</h2>
+        <p>Get exclusive deals and networking tips</p>
+        <div class="newsletter-form">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email...">
+            <button class="btn btn-primary" onclick="subscribeNewsletter();showAction('Subscribe Newsletter')">Subscribe</button>
+        </div>
+        <p id="newsletterMsg" class="success-msg"></p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="footer-grid">
+        <div>
+            <h4>🌐 Network Store</h4>
+            <p>Your trusted source for premium networking equipment since 2010.</p>
+        </div>
+        <div>
+            <h4>Quick Links</h4>
+            <a href="products.html">Products</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div>
+            <h4>Categories</h4>
+            <a href="products.html">Routers</a>
+            <a href="products.html">Switches</a>
+            <a href="products.html">Firewalls</a>
+        </div>
+        <div>
+            <h4>Contact Info</h4>
+            <p>📧 support@netstore.com</p>
+            <p>📞 +1 (555) 123-4567</p>
+            <p>📍 Cairo, Egypt</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Network Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function showAction(action) {
+    let toast = document.getElementById('action-toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'action-toast';
+        toast.style.cssText = 'position:fixed;top:30px;left:50%;transform:translateX(-50%) translateY(-100px);background:linear-gradient(135deg,#6366f1,#0ea5e9);color:#fff;padding:14px 30px;border-radius:10px;font-weight:600;z-index:9999;transition:transform 0.4s;box-shadow:0 8px 30px rgba(14,165,233,0.4);';
+        document.body.appendChild(toast);
+    }
+    toast.textContent = `Action: ${action}`;
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+    setTimeout(() => { toast.style.transform = 'translateX(-50%) translateY(-100px)'; }, 2000);
+}
+</script>
+</body>
+</html>

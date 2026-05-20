@@ -1,29 +1,29 @@
-# 🌐 Network Store - Premium Networking Solutions
+# Network Store - Premium Networking Solutions
 
 Welcome to the **Network Store**, a modern, feature-rich, and interactive e-commerce web application dedicated to premium enterprise-grade networking equipment. Built with a stunning glassmorphism design, vibrant color gradients, and dynamic interactive elements, this application serves as a complete showcase for routers, switches, firewalls, and more.
 
-## 🚀 Key Features
+##  Key Features
 
-*   **🛒 Interactive Product Catalog & Dynamic Cart**
+*   * Interactive Product Catalog & Dynamic Cart**
     *   Dynamic catalog loading directly from a JSON database.
     *   Advanced sorting (price low-to-high, high-to-low, name A-Z) and filtering by category (Routers, Switches, Firewalls, Cables, Access Points, Racks, UPS, etc.).
     *   Detailed product configuration modal with model-specific specifications, pricing, and image updates.
     *   Full-featured shopping cart (Add, update quantity, remove, and simulated checkout) connected to a backend JSON database.
-*   **📡 Real-time Network Speed Tester**
+*   ** Real-time Network Speed Tester**
     *   A built-in utility that runs an accurate connection speed test.
     *   Downloads a live 5MB test file to calculate real-world download speed (in Mbps).
     *   Features a dynamic progress bar and automated network analysis.
-*   **⚡ Interactive Flash Sales**
+*   ** Interactive Flash Sales**
     *   Engaging flash sale modals featuring rotating enterprise deals (Cisco, Fortinet, Ubiquiti, Meraki) at up to 50% off.
-*   **💬 Mock Live Chat Support**
+*   ** Mock Live Chat Support**
     *   Fully functional mock chat interface with automated assistance to simulate real-time customer support.
-*   **✨ Immersive User Experience (UX)**
-    *   Custom canvas-based network particle background.
-    *   Interactive scroll-based company timeline journey.
-    *   Animated numerical count-ups for business statistics.
-    *   Glassmorphism UI elements, micro-animations, and toast notifications.
-*   **📬 Contact & Newsletter Signups**
-    *   Validation-enabled newsletter subscriptions.
+*    Immersive User Experience (UX)**
+       Custom canvas-based network particle background.
+      Interactive scroll-based company timeline journey.
+      Animated numerical count-ups for business statistics.
+      Glassmorphism UI elements, micro-animations, and toast notifications.
+       Contact & Newsletter Signups**
+       Validation-enabled newsletter subscriptions.
     *   Dynamic contact form that saves client messages directly to the server.
 
 ---
@@ -37,7 +37,7 @@ Welcome to the **Network Store**, a modern, feature-rich, and interactive e-comm
 
 ---
 
-## 📂 Project Structure
+   Project Structure
 
 ```text
 ├── Index.html           # Home page with hero section, speed test, and featured products
@@ -55,7 +55,7 @@ Welcome to the **Network Store**, a modern, feature-rich, and interactive e-comm
 
 ---
 
-## 🚦 Getting Started
+##  Getting Started
 
 Follow these steps to run the application locally with full functionality:
 
@@ -85,6 +85,6 @@ Since this is a client-side app, you can simply open `Index.html` directly in an
 
 ---
 
-## 🌟 License
+ License
 
 This project is open-source and available under the [MIT License](LICENSE).

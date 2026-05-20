@@ -28,7 +28,7 @@ Welcome to the **Network Store**, a modern, feature-rich, and interactive e-comm
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 
 *   **Frontend:** HTML5, CSS3 (Vanilla CSS with CSS variables, Flexbox/Grid, transitions), JavaScript (ES6+).
 *   **Animations:** Canvas API (Particle network), Intersection Observer API (Scroll animations), CSS Keyframes.
